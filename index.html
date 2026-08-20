@@ -1,116 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="M STORE - متجر إلكتروني عصري">
-  <title>M STORE | متجر إلكتروني</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MO STORE | بولو</title>
+<meta name="description" content="MO STORE - متجر بولو أونلاين">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="header">
-  <a href="#" class="logo">M<span>STORE</span></a>
-
-  <nav class="nav">
-    <a href="#home">الرئيسية</a>
-    <a href="#products">المنتجات</a>
-    <a href="#categories">الأقسام</a>
-    <a href="#about">عن المتجر</a>
-  </nav>
-
-  <div class="header-actions">
-    <button class="icon-btn" id="searchBtn" aria-label="بحث">⌕</button>
-    <button class="icon-btn cart-btn" id="cartBtn" aria-label="السلة">🛒<b id="cartCount">0</b></button>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </div>
+<header>
+  <a class="brand" href="#">MO <span>STORE</span></a>
+  <button class="cartBtn" onclick="openCart()">السلة 🛒 <b id="count">0</b></button>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <p class="eyebrow">NEW COLLECTION 2026</p>
-    <h1>ستايلك يبدأ<br><span>من M STORE</span></h1>
-    <p class="hero-text">اكتشف أحدث المنتجات بتصميم عصري وتجربة شراء بسيطة وسريعة.</p>
-    <div class="hero-buttons">
-      <a class="btn primary" href="#products">تسوق الآن <span>←</span></a>
-      <a class="btn ghost" href="#categories">استكشف الأقسام</a>
-    </div>
-  </div>
-  <div class="hero-card">
-    <div class="glow"></div>
-    <div class="product-shape">M</div>
-    <div class="floating-tag">M STORE</div>
-  </div>
-</section>
-
-<section class="features">
-  <div><strong>🚚</strong><span><b>شحن سريع</b><small>لجميع المحافظات</small></span></div>
-  <div><strong>↩</strong><span><b>استبدال سهل</b><small>خلال 14 يوم</small></span></div>
-  <div><strong>✓</strong><span><b>دفع آمن</b><small>حماية لبياناتك</small></span></div>
-  <div><strong>24/7</strong><span><b>خدمة العملاء</b><small>متاحين دائمًا</small></span></div>
-</section>
-
-<section class="section" id="categories">
-  <div class="section-head">
-    <div><p class="eyebrow">SHOP BY CATEGORY</p><h2>تسوق حسب القسم</h2></div>
-  </div>
-  <div class="categories">
-    <button class="category active" data-category="all"><span>✦</span>كل المنتجات</button>
-    <button class="category" data-category="fashion"><span>◈</span>ملابس</button>
-    <button class="category" data-category="shoes"><span>◇</span>أحذية</button>
-    <button class="category" data-category="accessories"><span>○</span>إكسسوارات</button>
-  </div>
-</section>
-
-<section class="section" id="products">
-  <div class="section-head">
-    <div><p class="eyebrow">OUR PRODUCTS</p><h2>أحدث المنتجات</h2></div>
-    <span class="result-count" id="resultCount"></span>
-  </div>
-  <div class="products" id="productsGrid"></div>
-</section>
-
-<section class="newsletter" id="about">
+<section class="hero">
   <div>
-    <p class="eyebrow">M STORE</p>
-    <h2>خليك أول واحد يعرف الجديد.</h2>
-    <p>اشترك ليصلك كل جديد وعروضنا الخاصة.</p>
+    <span class="tag">MO STORE</span>
+    <h1>بولو ستايلك يبدأ هنا</h1>
+    <p>تيشيرت بولو بخامة مريحة وتصميم عملي — اطلب مقاسك الآن.</p>
+    <a href="#shop" class="cta">اطلب الآن</a>
   </div>
-  <form id="newsletterForm">
-    <input type="email" placeholder="البريد الإلكتروني" required>
-    <button class="btn primary" type="submit">اشترك</button>
-  </form>
 </section>
 
-<footer>
-  <div class="footer-logo">M<span>STORE</span></div>
-  <p>© 2026 M STORE — جميع الحقوق محفوظة</p>
-  <div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
-</footer>
-
-<div class="overlay" id="overlay"></div>
-
-<aside class="cart-panel" id="cartPanel">
-  <div class="panel-head"><h3>سلة المشتريات</h3><button id="closeCart">×</button></div>
-  <div id="cartItems" class="cart-items"></div>
-  <div class="cart-bottom">
-    <div><span>الإجمالي</span><strong id="cartTotal">0 ج.م</strong></div>
-    <button class="btn primary checkout" id="checkoutBtn">إتمام الطلب</button>
+<main id="shop">
+  <div class="intro">
+    <div><small>منتجنا</small><h2>تيشيرت بولو MO</h2></div>
+    <p>المقاس M بسعر <strong>350 جنيه</strong> — المقاس L بسعر <strong>400 جنيه</strong>.</p>
   </div>
-</aside>
 
-<div class="search-modal" id="searchModal">
-  <div class="search-box">
-    <button id="closeSearch">×</button>
-    <p class="eyebrow">SEARCH</p>
-    <h2>ابحث عن منتج</h2>
-    <input id="searchInput" type="search" placeholder="مثال: تيشيرت، حذاء...">
+  <section class="product">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1625910513413-5fc45b0b7f0d?auto=format&fit=crop&w=1000&q=85" alt="تيشيرت بولو">
+    </div>
+    <div class="details">
+      <span class="stock">متاح للطلب</span>
+      <h2>MO Polo Shirt</h2>
+      <p class="desc">تيشيرت بولو مناسب للاستخدام اليومي، بتصميم بسيط وأنيق.</p>
+      <div class="prices">
+        <button class="size active" data-size="M" data-price="350" onclick="selectSize(this)">M <b>350 ج</b></button>
+        <button class="size" data-size="L" data-price="400" onclick="selectSize(this)">L <b>400 ج</b></button>
+      </div>
+      <div class="quantity">
+        <button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button>
+      </div>
+      <div class="buyRow">
+        <strong id="selectedPrice">350 جنيه</strong>
+        <button class="buy" onclick="addToCart()">أضف للسلة</button>
+      </div>
+      <ul>
+        <li>✓ اختيار المقاس قبل الطلب</li>
+        <li>✓ طلب مباشر عبر واتساب</li>
+        <li>✓ لا يتم تأكيد الطلب إلا بعد التواصل</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<section class="info">
+  <h2>MO STORE</h2>
+  <p>متجر متخصص في تيشيرتات البولو. الأسعار واضحة قبل إرسال الطلب.</p>
+</section>
+
+<footer>© 2026 MO STORE</footer>
+
+<div id="overlay" class="overlay" onclick="closeCart(event)">
+  <div class="cart" onclick="event.stopPropagation()">
+    <button class="x" onclick="closeCart()">×</button>
+    <h2>سلة الطلب</h2>
+    <div id="items"></div>
+    <div class="total">الإجمالي <strong><span id="total">0</span> جنيه</strong></div>
+    <button class="checkout" onclick="sendOrder()">إرسال الطلب عبر واتساب</button>
   </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
